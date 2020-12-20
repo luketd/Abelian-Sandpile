@@ -5,12 +5,13 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+#include <iostream>
 #include "make_sandpile.h"
 
 using namespace std;
 
 // define a function for generating a random sandpile given a size and count
+// need to change for user input rather than randomly generated
 Sandpile make_sandpile::randomPile(int size, int count)
 {
     int row, column;
@@ -26,21 +27,21 @@ Sandpile make_sandpile::randomPile(int size, int count)
     {
         row = dis(engine);
         column = dis(engine);
-        rand_pile[row][column]++;
+        rand_pile[row][column] + 1;
     }
     return sandpile;
 }
 
 // define a function for reading a sandpile from a file given its filename
-Sandpile make_sandpile::readFile(ifstream &file)
+Sandpile getFile(ifstream &inFile)
 {
-    vector<vector<int>> sandpile;
+    Sandpile sandpile; 
     string buffer;
-
-    while (getline(inFile, bufffer)
+    while (getline(inFile, buffer))
     {
         istringstream ss(buffer);
         copy(std::istream_iterator<int>(ss), {}, back_inserter(sandpile.emplace_back()));
     }
     return sandpile;
+    
 }

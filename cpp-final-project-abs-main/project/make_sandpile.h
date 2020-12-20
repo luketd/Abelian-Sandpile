@@ -16,6 +16,6 @@ class make_sandpile
 
 
 // forward declare a function for reading a sandpile from a file given its filename
-    readFile(ifstream inFile);
+    getFile(ifstream &inFile);
 
 };
