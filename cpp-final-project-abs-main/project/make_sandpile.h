@@ -6,9 +6,6 @@
 
 #include "sandpile.h"
 
-using namespace std;
-
-
 
 class make_sandpile
 {
@@ -19,6 +16,6 @@ class make_sandpile
 
 
 // forward declare a function for reading a sandpile from a file given its filename
-    readFile(ifstream &file);
+    readFile(ifstream inFile);
 
 };

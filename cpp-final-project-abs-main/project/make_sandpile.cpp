@@ -11,7 +11,7 @@
 using namespace std;
 
 // define a function for generating a random sandpile given a size and count
-make_sandpile::randomPile(int size, int count)
+Sandpile make_sandpile::randomPile(int size, int count)
 {
     int row, column;
     uniform_int_distribution<int> dis(0, size-1);
@@ -32,12 +32,12 @@ make_sandpile::randomPile(int size, int count)
 }
 
 // define a function for reading a sandpile from a file given its filename
-make_sandpile::readFile(ifstream &file)
+Sandpile make_sandpile::readFile(ifstream &file)
 {
-    Sandpile sandpile;
-    string buffer = "";
+    vector<vector<int>> sandpile;
+    string buffer;
 
-    while (getline(file, infile)
+    while (getline(inFile, bufffer)
     {
         istringstream ss(buffer);
         copy(std::istream_iterator<int>(ss), {}, back_inserter(sandpile.emplace_back()));
