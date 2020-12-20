@@ -14,26 +14,26 @@ using namespace std;
 // need to change for user input rather than randomly generated
 Sandpile make_sandpile::randomPile(int size, int count)
 {
-    int row, column;
+    int row, column; 
     uniform_int_distribution<int> dis(0, size-1);
     mt19937_64 engine(1337);
     Sandpile sandpile;
-    for (int = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         Row rows(size,0);
-        rand_pile.push_back(rows);
+        sandpile.push_back(rows);
     }
     for(int i = 0; i < count; i++)
     {
         row = dis(engine);
         column = dis(engine);
-        rand_pile[row][column] + 1;
+        sandpile[row][column]++;
     }
     return sandpile;
 }
 
 // define a function for reading a sandpile from a file given its filename
-Sandpile getFile(ifstream &inFile)
+Sandpile make_sandpile::getFile(ifstream &inFile)
 {
     Sandpile sandpile; 
     string buffer;

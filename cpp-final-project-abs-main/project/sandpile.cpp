@@ -2,6 +2,7 @@
 #include "make_sandpile.cpp"
 #include <iostream>
 
+bool is_stable = true;
 bool stable(Sandpile sandpile)
 {
   int N = sandpile.size(); //Size of the sandpile

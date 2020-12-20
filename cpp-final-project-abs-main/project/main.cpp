@@ -14,38 +14,19 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    make_sandpile make_pile;
+    make_sandpile classSand;
     Sandpile sandpile;
 
-    if(atoi(argv[1] == 1)) //This function uses atoi to convert the string to ints so we can pass the index of them
-    {
-        if(argc != 4)
-        {
-            cout << "Invalid Input" << endl;//Error handling
-            return 0;
-        }
-        else
-        {
-            sandpile = make_pile.randomPile(atoi(argv[1]), atoi(argv[2]));
-        }
-    } 
-    else if (atoi(argv[1] == 2)) //This function uses atoi to convert the string to ints so we can pass the index of them
-    {
-        if(argc != 3)
-        {
-            cout << "Invalid Input" << endl;//Error handling
-            return 0;
-        }
-        else
-        {
-            ifstream inFile(argv[2]);
-            sandpile = make_pile.getFile(inFile);
-            inFile.close();
-        }
-    } 
-    else 
-    {
-        cout << "Invalid Input" << endl;//Error handling
+    if (argc == 1){
+        cout << "file" << endl;
+        ifstream inFile(argv[2]);
+        sandpile = classSand.getFile(inFile);
+        inFile.close();
+    } else if (argc == 2) {
+        cout <<"random number" << endl;
+        sandpile = classSand.randomPile(atoi(argv[1]), atoi(argv[2]));
+    } else {
+        cout << "invalid input";
         return 0;
     }
     //Animation animate; 
