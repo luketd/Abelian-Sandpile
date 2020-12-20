@@ -24,4 +24,30 @@ int main(int argc, char **argv)
         return 0;
     }
     //Animation animate; 
+    
+    // sort unstable sandpile
+    for (int i = 0; i < N; i++)
+    {
+
+        for (int j = 0; j < N; j++)
+        {
+
+            if (sandpile[i][j] >= 4)
+            {
+
+                sandpile[i][j] -= 4;
+                changed = true;
+                try
+                {
+                    sandpile[i - 1][j] += 1;
+                    sandpile[i + 1][j] += 1;
+                    sandpile[i][j - 1] += 1;
+                    sandpile[i][j + 1] += 1;
+                }
+                catch (const std::out_of_range &oor)
+                {
+                }
+            }
+        }
+    }
 }

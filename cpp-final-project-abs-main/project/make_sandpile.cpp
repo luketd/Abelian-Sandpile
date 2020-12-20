@@ -1,14 +1,16 @@
 #include <algorithm>
+#include <vector>
+#include <string>
 #include <fstream>
 #include <iterator>
 #include <random>
+#include <cmath>
 #include <sstream>
-#include <string>
-#include <vector>
-#include <iostream>
 #include "make_sandpile.h"
 
+
 using namespace std;
+
 
 // define a function for generating a random sandpile given a size and count
 // need to change for user input rather than randomly generated

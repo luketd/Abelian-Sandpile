@@ -2,8 +2,7 @@
 
 #include <string>
 #include <vector>
-
-
+using namespace std;
 #include "sandpile.h"
 
 
