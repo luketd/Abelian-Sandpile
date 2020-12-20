@@ -8,9 +8,15 @@
 
 using namespace std;
 
+class make_sandpile
+{
+    public:
+
 // forward declare a function for generating a random sandpile given a size and count
-int getCoord(int size, int count);
+    randomPile(int size, int count);
 
 
 // forward declare a function for reading a sandpile from a file given its filename
-void getFile(ifstream fileName);
+    getFile(ifstream inFile);
+
+};
