@@ -1,5 +1,6 @@
 #include "sandpile.h"
 #include "make_sandpile.cpp"
+#include <iostream>
 
 bool stable(int array[][])
 {
@@ -95,4 +96,5 @@ bool stable(int array[][])
   }
   return is_stable;
 }
+
 // define a function that takes a Sandpile by reference and returns a bool (to indicate if the Sandpile is stable)

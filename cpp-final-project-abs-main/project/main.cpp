@@ -12,11 +12,17 @@
 
 int main(int argc, char **argv)
 {
-    int x = argc;
-    char** y = argv;
-    cout << x << endl;
-    cout << y << endl;
-    //getFile();
+    if(argc ==2){
+        getFile(argv);
+    } else if (argc == 3){
+        // not totally right implementtation
+        getCoord(argc[0], argc[1]);
+    } else {
+        cout << "Invalid Input" << endl;
+        return 0;
+    }
+    Animation animate; 
 
+    
 
 }

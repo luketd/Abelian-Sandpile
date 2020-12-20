@@ -5,7 +5,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+#include <iostream>
 #include "make_sandpile.h"
 
 using namespace std;
@@ -14,12 +14,10 @@ using namespace std;
 // need to change for user input rather than randomly generated
 int getCoord(int size, int count)
 {
+    
     int S, N;
-    cout << "S value: ";
-    cin >> S;
-    cout << "N value: ";
-    cin >> N;
-    int rand_num;
+    S = size;
+    N = count;
     uniform_int_distribution<int> dis(0, S);
     mt19937_64 engine(1337);
 
@@ -37,11 +35,8 @@ int getCoord(int size, int count)
     {
         row = dis(engine);
         column = dis(engine);
-        /*if (N < rand_num)
-        {
-            rand_num = N;
-        }
-        */
+        
+        
         array[row][column] += 1;
         N = N - 1;
         //cout << row;
@@ -59,18 +54,16 @@ int getCoord(int size, int count)
         }
         cout << '\n';
     }
+
 }
 
 // define a function for reading a sandpile from a file given its filename
-void getFile()
+void getFile(ifstream inFile)
 {
-    ifstream infile("sandpile_20.bin");
-    vector<int> sandpile;
+    vector<vector<int>> sandpile; 
     string buffer;
-
-    while (infile)
+    while (getline(inFile, buffer))
     {
-        getline(infile, buffer);
         istringstream ss(buffer);
         copy(std::istream_iterator<int>(ss), {}, back_inserter(sandpile.emplace_back()));
     }
