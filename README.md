@@ -17,3 +17,8 @@ Sources we have used for our Sandpile
 
 http://www.cplusplus.com/forum/unices/54404/ - Passing a file as a function reference argument
 https://rosettacode.org/wiki/Abelian_sandpile_model#C.2B.2B - For more code and explaination on the sandpile model
+
+
+//Todo
+//Format the readme so its not just plain text
+//Explain more 
