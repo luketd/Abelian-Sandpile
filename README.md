@@ -4,7 +4,7 @@
 In order to run the program type
 
 To run a random sandpile based on given parameters
-* ./main.exe 1,1 
+* ./main.exe 4 30 
 
 To run a sandpile from a predefined file
 
