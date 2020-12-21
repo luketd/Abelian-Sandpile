@@ -8,7 +8,7 @@
 #include <sstream>
 #include "make_sandpile.h"
 
-
+#include <iostream>
 using namespace std;
 
 
@@ -37,10 +37,11 @@ Sandpile randomPile(int size, int count)
 }
 
 // define a function for reading a sandpile from a file given its filename
-Sandpile getFile(ifstream &inFile)
+Sandpile getFile(string fileGet)
 {
+    ifstream inFile(fileGet);
     Sandpile sandpile; 
-    string buffer;
+    string buffer = "";
     while (getline(inFile, buffer))
     {
         istringstream ss(buffer);

@@ -12,5 +12,5 @@ Sandpile randomPile(int size, int count);
 
 
 // forward declare a function for reading a sandpile from a file given its filename
-Sandpile getFile(std::ifstream &inFile);
+Sandpile getFile(std::string fileGet);
 

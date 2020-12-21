@@ -14,9 +14,9 @@ int main(int argc, char **argv)
     Sandpile sandpile;
 
     if (argc == 2){
-        ifstream inFile(argv[1]);
-        sandpile = getFile(inFile);
-        inFile.close();
+        //cout << argv[1] << endl;
+        string fileGet = argv[1];
+        sandpile = getFile(fileGet);
     } else if (argc == 3) {
         sandpile = randomPile(atoi(argv[1]), atoi(argv[2]));
     } else {
