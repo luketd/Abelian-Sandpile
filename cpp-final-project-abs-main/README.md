@@ -33,7 +33,7 @@ The results we have gotten at first was a sandpile that only made 1 iteration an
 
 In the end the results are that we made a working Abelian sandpile model that works with the .dat  files as well as if you put in 2 parameters. 
 
-![] (https://im3.ezgif.com/tmp/ezgif-3-f45f8df40909.gif)
+![](https://im3.ezgif.com/tmp/ezgif-3-f45f8df40909.gif)
 
 ## What we could have done differently
 
