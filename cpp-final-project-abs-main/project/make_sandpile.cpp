@@ -41,7 +41,7 @@ Sandpile getFile(string fileGet)
 {
     ifstream inFile(fileGet);
     Sandpile sandpile; 
-    string buffer = "";
+    string buffer;
     while (getline(inFile, buffer))
     {
         istringstream ss(buffer);

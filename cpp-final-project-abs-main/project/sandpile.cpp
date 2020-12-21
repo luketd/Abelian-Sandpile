@@ -9,7 +9,6 @@ bool stable(Sandpile sandpile)
   {
     for (int j = 0; j < N; j++)
     {
-      //std::cout << sandpile[i][j] << std::endl;
       if (sandpile[i][j] >= 4) //This will check if the amount of piece is 4 or more so we have to move them off
       {
 
@@ -21,13 +20,6 @@ bool stable(Sandpile sandpile)
       }
     }
   }
-  if (is_stable == true){
-    //std::cout << "TRUE" << std::endl;
-    return true;
-  }
-  else {
-    //std::cout << "FALSE" << std::endl;
-    return false;
-  }
+  return is_stable;
 }
   
