@@ -26,6 +26,8 @@ int main(int argc, char **argv)
     //Animation animate; 
     
     // sort unstable sandpile
+    //bool changed;
+    int N = sandpile.size();
     for (int i = 0; i < N; i++)
     {
 
@@ -36,7 +38,7 @@ int main(int argc, char **argv)
             {
 
                 sandpile[i][j] -= 4;
-                changed = true;
+                //changed = true;
                 try
                 {
                     sandpile[i - 1][j] += 1;
