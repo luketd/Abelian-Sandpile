@@ -1,5 +1,4 @@
 #include "sandpile.h"
-#include "make_sandpile.cpp"
 #include <iostream>
 
 bool is_stable = true;

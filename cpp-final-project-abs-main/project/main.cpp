@@ -13,19 +13,20 @@ int main(int argc, char **argv)
 {
     Sandpile sandpile;
 
-    if (argc == 1){
+    if (argc == 2){
         ifstream inFile(argv[2]);
         sandpile = getFile(inFile);
         inFile.close();
-    } else if (argc == 2) {
+    } else if (argc == 3) {
         sandpile = randomPile(atoi(argv[1]), atoi(argv[2]));
     } else {
-        cout << "invalid input";
+        cout << "invalid input" << endl;
         return 0;
     }
     //Animation animate; 
     
     // sort unstable sandpile
+    int N = sandpile.size();
     for (int i = 0; i < N; i++)
     {
 
@@ -36,7 +37,7 @@ int main(int argc, char **argv)
             {
 
                 sandpile[i][j] -= 4;
-                changed = true;
+                //changed = true;
                 try
                 {
                     sandpile[i - 1][j] += 1;
