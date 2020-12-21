@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
     if (argc == 2){
         string fileGet = argv[1];
-        sandpile = getFile(fileGet);
+        sandpile = getFile(fileGet); 
     } else if (argc == 3) {
         sandpile = randomPile(atoi(argv[1]), atoi(argv[2]));
     } else {

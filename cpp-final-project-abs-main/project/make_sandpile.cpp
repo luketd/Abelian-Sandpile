@@ -23,7 +23,6 @@ Sandpile randomPile(int size, int count)
 
     for (int i = 0; i < size; i++)
     {
-        //Sandpile(size,Row(size));
         Row rows(size,0);
         sandpile.push_back(rows);
     }
