@@ -20,8 +20,10 @@ Sandpile randomPile(int size, int count)
     uniform_int_distribution<int> dis(0, size-1);
     mt19937_64 engine(1337);
     Sandpile sandpile;
+
     for (int i = 0; i < size; i++)
     {
+        //Sandpile(size,Row(size));
         Row rows(size,0);
         sandpile.push_back(rows);
     }
