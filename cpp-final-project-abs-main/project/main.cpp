@@ -28,8 +28,8 @@ int main(int argc, char **argv)
     animation.push_back(sandpile);
     bool isStable = false;
     int N = sandpile.size();
-    cout << N;
-    cout << "SIZE" << endl;
+    //cout << N;
+    //cout << "SIZE" << endl;
     while (isStable == false){
             for (int i = 0; i < N; i++)
             {
@@ -43,41 +43,31 @@ int main(int argc, char **argv)
 
                     if (sandpile[i][j] >= 4)
                     {
-                        //cout << i << endl;    
-                        //cout << j << endl;
                         
                         
                         sandpile[i][j] -= 4;
-
+                        
                         //cout << sandpile[i][j] << endl;
-                        if (i - 1< 0){
-                            
-                        }else{
-                            cout << i - 1 << endl;   
-                            cout << "X-1" << endl;
+                        if (i > 0){ 
                             sandpile[i - 1][j] += 1;
-                        }
-                        if (i + 1 > N){
                             
-                        }else{
-                            cout << i + 1 << endl;
-                            cout << "X+1" << endl;
+                        }
+                        if (i < N - 1){
                             sandpile[i + 1][j] += 1;
+                            
                         }
-                        if (j - 1 < 0){
-                            
-                        }else{
-                            
-                            cout << "Y-1" << endl;
+                        if (j > 0 ){
                             sandpile[i][j - 1] += 1;
-                        }
-                        if (j + 1 > N) {
                             
-                        }else{
-                            cout << "Y+1" << endl;
-                            sandpile[i][j + 1] += 1;
                         }
-                        cout << "DONE" << endl;
+                        if (j < N-1) {
+                            sandpile[i][j + 1] += 1;
+                            
+                        }
+                        
+                        //cout << "DONE" << endl;
+                        
+
                     }
                     
 

@@ -1,9 +1,9 @@
 #include "sandpile.h"
 #include <iostream>
 
-bool is_stable = true;
 bool stable(Sandpile sandpile)
 {
+  bool is_stable = true;
   int N = sandpile.size(); //Size of the sandpile
   for (int i = 0; i < N; i++) //These for loops will go through the sandpile and see if it is stable or not
   {
@@ -22,11 +22,11 @@ bool stable(Sandpile sandpile)
     }
   }
   if (is_stable == true){
-    std::cout << "TRUE" << std::endl;
+    //std::cout << "TRUE" << std::endl;
     return true;
   }
   else {
-    std::cout << "FALSE" << std::endl;
+    //std::cout << "FALSE" << std::endl;
     return false;
   }
 }
