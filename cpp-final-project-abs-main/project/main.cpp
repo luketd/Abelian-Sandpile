@@ -14,7 +14,6 @@ int main(int argc, char **argv)
     Sandpile sandpile;
 
     if (argc == 2){
-        //cout << argv[1] << endl;
         string fileGet = argv[1];
         sandpile = getFile(fileGet);
     } else if (argc == 3) {
@@ -28,26 +27,20 @@ int main(int argc, char **argv)
     animation.push_back(sandpile);
     bool isStable = false;
     int N = sandpile.size();
-    //cout << N;
-    //cout << "SIZE" << endl;
     while (isStable == false){
             for (int i = 0; i < N; i++)
             {
 
                 for (int j = 0; j < N; j++)
                 {
-                    //cout << sandpile[i][j] << endl;
                     if (sandpile[i][j] < 4){
                         sandpile[i][j] = sandpile[i][j];
                     }
-
+                    //check to see if the point in the sandpile is unstable
                     if (sandpile[i][j] >= 4)
                     {
-                        
-                        
+                        //checks boundaries of the sandpile
                         sandpile[i][j] -= 4;
-                        
-                        //cout << sandpile[i][j] << endl;
                         if (i > 0){ 
                             sandpile[i - 1][j] += 1;
                             
@@ -64,16 +57,13 @@ int main(int argc, char **argv)
                             sandpile[i][j + 1] += 1;
                             
                         }
-                        
-                        //cout << "DONE" << endl;
-                        
 
                     }
                     
 
                 }
             }
-            isStable = stable(sandpile);
+            isStable = stable(sandpile); //returns true or false
             animation.push_back(sandpile);
 
 
