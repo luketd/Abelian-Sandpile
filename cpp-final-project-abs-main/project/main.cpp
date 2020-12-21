@@ -13,12 +13,12 @@ int main(int argc, char **argv)
 {
     Sandpile sandpile;
 
-    if (argc == 2){
+    if (argc == 2){ //This will get and read the file
         string fileGet = argv[1];
         sandpile = getFile(fileGet); 
-    } else if (argc == 3) {
+    } else if (argc == 3) { //This will create the random pile
         sandpile = randomPile(atoi(argv[1]), atoi(argv[2]));
-    } else {
+    } else { //Throws error
         cout << "invalid input" << endl;
         return 0;
     }
