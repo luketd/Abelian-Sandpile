@@ -35,6 +35,8 @@ In the end the results are that we made a working Abelian sandpile model that wo
 
 ![](https://im3.ezgif.com/tmp/ezgif-3-f45f8df40909.gif)
 
+![](https://im3.ezgif.com/tmp/ezgif-3-3d35447945df.gif)
+
 ## What we could have done differently
 
 What we could have done differently is optimize it more, I feel that there are better optimizatoin methods to check if the sandpile is stable or not, rather than running through the matrix after each iteration
