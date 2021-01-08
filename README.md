@@ -1,4 +1,4 @@
-# CPP-Final
+# Abelian Sandpile
 ### How to run
 
 In order to run the program type
